@@ -32,11 +32,11 @@ export default function index() {
           <Bell />
         </div>
         <div className="w-screen z-[3] mx-5">
-          <SearchBar />
+          <SearchBar name="Mau kemana hari ini?" />
         </div>
       </div>
       <div className="mt-4 mx-5">
-        <Button />
+        <Button name="Pesan Tiket" />
       </div>
       <div className="mt-2 mx-5">
         <p>Seputar BisKita</p>

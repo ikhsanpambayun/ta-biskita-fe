@@ -1,15 +1,18 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Arrow from "../components/Arrow";
-import JadwalForm from "../components/JadwalForm";
+import KoridorCard from "../components/KoridorCard";
 
-export default function jadwal() {
+export default function jadwalKoridor() {
   return (
     <div>
       <Layout>
         <Arrow />
         <h1>Jadwal Biskita</h1>
-        <JadwalForm />
+        <p>Pilih Koridor</p>
+        <KoridorCard />
+        <KoridorCard />
+        <KoridorCard />
       </Layout>
     </div>
   );
