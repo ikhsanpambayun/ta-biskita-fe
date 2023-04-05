@@ -5,7 +5,7 @@ export default function Bell() {
     <div>
       <button
         type="button"
-        className="px-2 py-2 bg-[#3A3270] h-auto rounded-lg"
+        className="px-2 py-2 bg-primary hover:bg-primary-dark active:bg-primary-light focus:outline-none focus:ring focus:ring-primary-light h-auto rounded-lg"
       >
         <svg
           class="h-6 w-6 text-red-500"

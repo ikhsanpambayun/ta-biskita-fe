@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 
 export default function Navbar() {
   return (
-    <nav className="sticky bottom-0 bg-white w-screen flex space-x-5 justify-center rounded-t-xl shadow-2lg">
-      <div className="basis-1/5">
+    <nav className="fixed bottom-0 bg-white w-full flex space-x-5 justify-center rounded-t-xl shadow-2lg md:hidden">
+      <div className="basis-1/5 mt-1 mb-1">
         <Link to="/">
           <div className="flex flex-col items-center my-2">
             <svg
@@ -20,11 +20,11 @@ export default function Navbar() {
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
               />
             </svg>
-            <span>Beranda</span>
+            <span className="text-xs mt-1">Beranda</span>
           </div>
         </Link>
       </div>
-      <div className="basis-1/5">
+      <div className="basis-1/5 mt-1 mb-1">
         <Link to="/">
           <div className="flex flex-col items-center my-2">
             <svg
@@ -42,11 +42,11 @@ export default function Navbar() {
               <line x1="8" y1="2" x2="8" y2="6" />{" "}
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
-            <span>Jadwal</span>
+            <span className="text-xs mt-1">Jadwal</span>
           </div>
         </Link>
       </div>
-      <div className="basis-1/5">
+      <div className="basis-1/5 mt-1 mb-1">
         <Link to="/">
           <div className="flex flex-col items-center my-2">
             <svg
@@ -67,7 +67,7 @@ export default function Navbar() {
               <path d="M4 15v-3a8 8 0 0 1 16 0v3" />{" "}
               <path d="M18 19a6 3 0 0 1 -6 3" />
             </svg>
-            <span>Bantuan</span>
+            <span className="text-xs mt-1">Bantuan</span>
           </div>
         </Link>
       </div>
