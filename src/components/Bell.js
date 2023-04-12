@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "gatsby";
 
 export default function Bell() {
   return (
-    <div>
+    <Link to="/notif">
       <button
         type="button"
         className="px-2 py-2 bg-primary hover:bg-primary-dark active:bg-primary-light focus:outline-none focus:ring focus:ring-primary-light h-auto rounded-lg"
@@ -21,6 +22,6 @@ export default function Bell() {
           />
         </svg>
       </button>
-    </div>
+    </Link>
   );
 }

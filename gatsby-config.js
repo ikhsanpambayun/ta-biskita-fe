@@ -8,13 +8,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Inter`],
-        display: "swap",
-      },
-    },
-    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

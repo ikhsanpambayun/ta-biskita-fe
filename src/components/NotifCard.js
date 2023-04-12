@@ -5,13 +5,16 @@ export default function NotifCard() {
   return (
     <div>
       <Card href="#">
-        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Noteworthy technology acquisitions 2021
-        </h5>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
+        <h5 className="text-lg font-semibold text-primary">Pengalihan Rute</h5>
+        <p className="text-sm font-light text-primary">
+          Terdapat pengalihan rute untuk koridor K1 dari Jl. Kapten Muslihat,
+          RT.01/RW.01, Pabaton, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat.
         </p>
+        <div className="flex gap-1">
+          <p className="text-sm font-light text-primary">19.00</p>
+          <p className="text-sm font-light text-primary">•</p>
+          <p className="text-sm font-light text-primary">4 Mar 23</p>
+        </div>
       </Card>
     </div>
   );

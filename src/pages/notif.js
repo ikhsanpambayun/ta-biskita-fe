@@ -6,9 +6,19 @@ import NotifCard from "../components/NotifCard";
 export default function notif() {
   return (
     <Layout>
-      <Arrow />
-      <h1>Notifikasi</h1>
-      <NotifCard />
+      <div className="md:container md:mx-auto mx-5">
+        <div className="md:hidden mt-5">
+          <Arrow />
+        </div>
+        <p className="text-2xl font-semibold text-primary mb-2 mt-2 md:mt-6">
+          Notifikasi
+        </p>
+        <div className="flex flex-col gap-2">
+          <NotifCard />
+          <NotifCard />
+          <NotifCard />
+        </div>
+      </div>
     </Layout>
   );
 }

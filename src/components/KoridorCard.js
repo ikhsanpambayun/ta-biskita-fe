@@ -3,17 +3,14 @@ import { Card } from "flowbite-react";
 
 export default function KoridorCard() {
   return (
-    <div>
+    <div className="min-w-[20%] p-2">
       <Card href="#">
-        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          K1B
-        </h5>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
-          Terminal Bubulak
-        </p>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
-          Bantarjati
-        </p>
+        <h5 className="text-primary text-base font-semibold">K1B</h5>
+        <div className="gap-1">
+          <p className="text-sm text-primary">• Terminal Bubulak</p>
+          <p className="text-sm text-primary mt-0 pt-0">• Bantarjati</p>
+        </div>
+        <div className="bg-primary h-2 rounded"></div>
       </Card>
     </div>
   );
