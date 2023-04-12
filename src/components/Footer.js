@@ -1,5 +1,5 @@
 import React from "react";
-import NavLogo from "../assets/NavLogo.svg";
+import NavLogo from "../assets/navLogo.svg";
 
 export default function Footer() {
   return (

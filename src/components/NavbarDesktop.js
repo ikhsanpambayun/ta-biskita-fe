@@ -1,5 +1,5 @@
 import React from "react";
-import NavLogo from "../assets/NavLogo.svg";
+import NavLogo from "../assets/navLogo.svg";
 import Bell from "../components/Bell";
 import { Link } from "gatsby";
 
