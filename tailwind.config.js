@@ -34,6 +34,8 @@ module.exports = {
       "primary-light": "#00aaff",
       "primary-dark": "#2e2858",
       secondary: "#F6B646",
+      alternative: "#F9F9F9",
+      "alternative-dark": "#E7E7E7",
     },
     container: {
       screens: {

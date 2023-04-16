@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/global.css";
 import BlobMobile from "../assets/blobMobile.svg";
 import BlobDesktop from "../assets/blobDesktop.svg";
 import Layout from "../components/Layout";
@@ -45,7 +44,7 @@ export default function index() {
       </div>
       <div className="md:container md:mx-auto">
         <div className="mt-3 md:mt-14 mx-5 md:mx-0">
-          <Button name="Pesan Tiket" />
+          <Button name="Pesan Tiket" type="button" link="/book" />
         </div>
         <div className="hidden md:block mt-3 md:mt-10">
           <Jadwal />

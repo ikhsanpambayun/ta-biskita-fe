@@ -1,8 +1,13 @@
 import React from "react";
+import { navigate } from "gatsby";
 
 export default function Arrow() {
   return (
-    <button>
+    <button
+      onClick={() => {
+        navigate(-1);
+      }}
+    >
       <svg
         class="h-8 w-8 text-red-500"
         width="24"

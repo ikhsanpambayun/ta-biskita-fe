@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/global.css";
 import Navbar from "./Navbar";
 import NavbarDesktop from "./NavbarDesktop";
 import Footer from "./Footer";
