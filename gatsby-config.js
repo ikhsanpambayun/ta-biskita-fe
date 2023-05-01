@@ -26,18 +26,18 @@ module.exports = {
         theme_color: "#ffffff",
         display: "standalone",
         icon: "src/assets/logo192.png",
-        // icons: [
-        //   {
-        //     src: "/src/assets/logo192.png",
-        //     sizes: "192x192",
-        //     type: "image/png",
-        //   },
-        //   {
-        //     src: "/src/assets/logo512.png",
-        //     sizes: "512x512",
-        //     type: "image/png",
-        //   },
-        // ],
+        icons: [
+          {
+            src: "src/assets/logo192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "src/assets/logo512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
       },
     },
     {
