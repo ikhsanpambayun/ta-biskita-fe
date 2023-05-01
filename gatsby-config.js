@@ -28,12 +28,12 @@ module.exports = {
         icon: "src/assets/logo192.png",
         icons: [
           {
-            src: "src/assets/logo192.png",
+            src: "/src/assets/logo192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "src/assets/logo512.png",
+            src: "/src/assets/logo512.png",
             sizes: "512x512",
             type: "image/png",
           },
