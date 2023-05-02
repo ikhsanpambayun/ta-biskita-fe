@@ -42,7 +42,7 @@ export default function index() {
           </div>
         </div>
       </div>
-      <div className="md:container md:mx-auto">
+      <div className="md:container md:mx-auto mb-28">
         <div className="mt-3 md:mt-14 mx-5 md:mx-0">
           <Button name="Pesan Tiket" type="button" link="/book" />
         </div>
@@ -59,7 +59,6 @@ export default function index() {
             <Slider />
           </div>
         </div>
-        <div className="h-20"></div>
       </div>
     </Layout>
   );

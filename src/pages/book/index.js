@@ -19,7 +19,7 @@ export default function index() {
               <div className="flex flex-col gap-1">
                 <label>Koridor</label>
                 <select
-                  class="rounded-lg bg-alternative p-3 border-alternative-dark"
+                  className="rounded-lg bg-alternative p-3 border-alternative-dark"
                   required
                 >
                   <option value="" selected disabled hidden>
@@ -29,7 +29,7 @@ export default function index() {
                   <option value="K1B">K1B</option>
                   <option value="K1B">K1B</option>
                 </select>
-                <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                <span className="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
                   Please enter a valid email address
                 </span>
               </div>
@@ -37,7 +37,7 @@ export default function index() {
                 <label>Halte Asal</label>
                 <select
                   required
-                  class="rounded-lg bg-alternative p-3 border-alternative-dark"
+                  className="rounded-lg bg-alternative p-3 border-alternative-dark"
                 >
                   <option value="" selected disabled hidden>
                     Pilih Halte
@@ -50,7 +50,7 @@ export default function index() {
               <div className="flex flex-col gap-1">
                 <label>Halte Tujuan</label>
                 <select
-                  class="rounded-lg bg-alternative p-3 border-alternative-dark"
+                  className="rounded-lg bg-alternative p-3 border-alternative-dark"
                   required
                 >
                   <option value="" selected disabled hidden>

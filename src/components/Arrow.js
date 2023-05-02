@@ -9,15 +9,15 @@ export default function Arrow() {
       }}
     >
       <svg
-        class="h-8 w-8 text-red-500"
+        className="h-8 w-8 text-red-500"
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        stroke-width="2"
+        strokeWidth="2"
         stroke="#F6B646"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         {" "}
         <path stroke="none" d="M0 0h24v24H0z" />{" "}

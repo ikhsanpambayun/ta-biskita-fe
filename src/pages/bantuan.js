@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Arrow from "../components/Arrow";
-import Button from "../components/Button";
+import ExButton from "../components/ExButton";
 import Figure from "../assets/figure.svg";
 
 export default function bantuan() {
@@ -20,7 +20,10 @@ export default function bantuan() {
             Butuh bantuan lebih lanjut? Silahkan menghubungi kontak kami di
             bawah ini
           </p>
-          <Button name="Kontak Melalui WhatsApp" />
+          <ExButton
+            name="Kontak Melalui WhatsApp"
+            link="https://www.instagram.com/rheznandyae/"
+          />
         </div>
       </div>
     </Layout>

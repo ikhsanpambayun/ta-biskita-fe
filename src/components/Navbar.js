@@ -21,18 +21,16 @@ export default function Navbar() {
     <nav className="fixed bottom-0 bg-white w-full flex space-x-5 justify-center rounded-t-xl shadow-2lg md:hidden">
       <div className="basis-1/5 p-2">
         <Link
-          exact
           to="/"
           getProps={isActive}
-          activeStyle={activeStyle}
           className="flex flex-col items-center px-4 py-2 rounded-lg text-primary"
         >
-          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24">
+          <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24">
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
             />
           </svg>
@@ -47,13 +45,13 @@ export default function Navbar() {
           className="flex flex-col items-center px-4 py-2 rounded-lg text-primary"
         >
           <svg
-            class="h-8 w-8"
+            className="h-8 w-8"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           >
             {" "}
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />{" "}
@@ -72,15 +70,15 @@ export default function Navbar() {
           className="flex flex-col items-center px-4 py-2 rounded-lg text-primary"
         >
           <svg
-            class="h-8 w-8"
+            className="h-8 w-8"
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            stroke-width="2"
             stroke="currentColor"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           >
             {" "}
             <path stroke="none" d="M0 0h24v24H0z" />{" "}
