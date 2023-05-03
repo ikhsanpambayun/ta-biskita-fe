@@ -7,7 +7,7 @@ import NotifCard from "../../components/NotifCard";
 export default function Index() {
   const [notifs, setNotifs] = useState(0);
   useEffect(() => {
-    fetch(`http://35.198.234.2:8000/api/v1/notifikasi-all/`)
+    fetch(`https://35.198.234.2/api/v1/notifikasi-all/`)
       .then((response) => response.json())
       .then((resultData) => {
         setNotifs(resultData);

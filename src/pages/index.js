@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import BlobMobile from "../assets/blobMobile.svg";
 import BlobDesktop from "../assets/blobDesktop.svg";
 import Layout from "../components/Layout";
@@ -8,7 +9,24 @@ import Slider from "../components/Slider";
 import Bell from "../components/Bell";
 import Jadwal from "../components/Jadwal";
 
-export default function index() {
+export default function Index() {
+  const [berita, setBerita] = useState(0);
+  useEffect(() => {
+    fetch(`https://35.198.234.2/api/v1/berita-all/`)
+      .then((response) => response.json())
+      .then((resultData) => {
+        setBerita(resultData);
+      });
+  }, []);
+
+  const seputar = [
+    {
+      cover: "https://pbs.twimg.com/media/FJyB98iaUAAFJKL.jpg",
+      judul: "judul",
+      id: 1,
+    },
+  ];
+
   return (
     <Layout>
       <div className="flex flex-wrap h-48 bg-primary z-[0] md:hidden">
@@ -52,11 +70,11 @@ export default function index() {
         <div className="flex flex-wrap m-auto md:justify-between mt-2 md:mt-10 mx-5 md:mx-0">
           <div className="md:w-2/5 w-full">
             <p className="text-primary text-sm">Seputar Biskita</p>
-            <Slider />
+            {seputar && <Slider raw={seputar} />}
           </div>
           <div className="md:w-2/5 w-full">
             <p className="text-primary text-sm">Berita Biskita</p>
-            <Slider />
+            {berita && <Slider raw={berita} />}
           </div>
         </div>
       </div>
