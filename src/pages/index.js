@@ -21,7 +21,7 @@ export default function Index() {
 
   const seputar = [
     {
-      cover: "https://pbs.twimg.com/media/FJyB98iaUAAFJKL.jpg",
+      cover: "",
       judul: "judul",
       id: 1,
     },

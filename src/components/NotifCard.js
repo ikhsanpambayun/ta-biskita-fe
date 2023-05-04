@@ -9,8 +9,7 @@ export default function NotifCard(props) {
         <p className="text-sm font-light text-primary">{props.desc}</p>
         <div className="flex gap-1">
           <p className="text-sm font-light text-primary">
-            {new Date(props.timestamp).getHours()}:
-            {new Date(props.timestamp).getMinutes()}
+            {new Date(props.timestamp).toTimeString().slice(0, 5)}
           </p>
           <p className="text-sm font-light text-primary">•</p>
           <p className="text-sm font-light text-primary">
