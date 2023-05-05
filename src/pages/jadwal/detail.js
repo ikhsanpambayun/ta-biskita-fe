@@ -5,10 +5,10 @@ import Arrow from "../../components/Arrow";
 import JadwalCard from "../../components/JadwalCard";
 
 export default function Detail({ location }) {
+  const { state = {} } = location;
   const [jadwals, setJadwals] = useState(0);
 
   useEffect(() => {
-    const { state = {} } = location;
     const url =
       "https://35.198.234.2/api/v1/jadwal-koridor-timestamp/?koridor_id=" +
       state.id +

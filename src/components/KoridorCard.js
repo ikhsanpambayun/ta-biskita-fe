@@ -8,7 +8,7 @@ export default function KoridorCard(props) {
   };
 
   return (
-    <div className="w-full md:max-w-[25%] md:p-2">
+    <div className="w-full xl:max-w-[25%] lg:max-w-[30%] md:max-w-[40%] md:p-2">
       <Link
         to={"/jadwal/detail/"}
         state={{ name: props.name, color: props.color, id: props.id }}
