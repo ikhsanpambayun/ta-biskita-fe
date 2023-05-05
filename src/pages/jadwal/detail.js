@@ -31,7 +31,7 @@ export default function Detail({ location }) {
             Jadwal Biskita {jadwals && console.log(jadwals)}
           </p>
           <p className="text-primary text-sm mb-2 md:mb-0">
-            Jadwal Koridor {location.state.name}
+            Jadwal Koridor {state.name}
           </p>
           <div className="flex flex-wrap gap-2">
             {jadwals &&
@@ -40,7 +40,7 @@ export default function Detail({ location }) {
                   key={jadwal.id}
                   timeFrom={jadwal.jam_berangkat}
                   timeDest={jadwal.jam_tujuan}
-                  color={location.state.color}
+                  color={state.color}
                 />
               ))}
           </div>
