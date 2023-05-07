@@ -6,11 +6,21 @@ import NotifCard from "../../components/NotifCard";
 
 export default function Index() {
   const [notifs, setNotifs] = useState(0);
+  const fetchNotif = async () => {
+    const response = await fetch("https://35.198.234.2/api/v1/notifikasi-all/");
+    if (!response.ok) {
+      throw new Error("Data coud not be fetched!");
+    } else {
+      return response.json();
+    }
+  };
   useEffect(() => {
-    fetch(`https://35.198.234.2/api/v1/notifikasi-all/`)
-      .then((response) => response.json())
-      .then((resultData) => {
-        setNotifs(resultData);
+    fetchNotif()
+      .then((res) => {
+        setNotifs(res);
+      })
+      .catch((e) => {
+        console.log(e.message);
       });
   }, []);
 

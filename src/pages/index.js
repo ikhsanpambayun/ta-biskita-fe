@@ -11,17 +11,28 @@ import Jadwal from "../components/Jadwal";
 
 export default function Index() {
   const [berita, setBerita] = useState(0);
+  const fetchBerita = async () => {
+    const response = await fetch("https://35.198.234.2/api/v1/berita-all/");
+    if (!response.ok) {
+      throw new Error("Data coud not be fetched!");
+    } else {
+      return response.json();
+    }
+  };
   useEffect(() => {
-    fetch(`https://35.198.234.2/api/v1/berita-all/`)
-      .then((response) => response.json())
-      .then((resultData) => {
-        setBerita(resultData);
+    fetchBerita()
+      .then((res) => {
+        setBerita(res);
+      })
+      .catch((e) => {
+        console.log(e.message);
       });
   }, []);
 
   const seputar = [
     {
-      cover: "",
+      cover:
+        "https://media.licdn.com/dms/image/C5603AQFS2X2FaEuhMg/profile-displayphoto-shrink_800_800/0/1593363126440?e=2147483647&v=beta&t=w9l17SshPvNk8ne05MAGH7u6lN1cS51-RiS6VY9TCsI",
       judul: "judul",
       id: 1,
     },
@@ -70,11 +81,11 @@ export default function Index() {
         <div className="flex flex-wrap m-auto md:justify-between mt-2 md:mt-10 mx-5 md:mx-0">
           <div className="md:w-2/5 w-full">
             <p className="text-primary text-sm">Seputar Biskita</p>
-            {seputar && <Slider raw={seputar} />}
+            {seputar && <Slider raw={seputar} type="seputar" />}
           </div>
           <div className="md:w-2/5 w-full">
             <p className="text-primary text-sm">Berita Biskita</p>
-            {berita && <Slider raw={berita} />}
+            {berita && <Slider raw={berita} type="berita" />}
           </div>
         </div>
       </div>
