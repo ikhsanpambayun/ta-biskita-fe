@@ -18,7 +18,7 @@ const isActive = ({ isCurrent }) => {
 
 export default function Navbar() {
   return (
-    <nav className="fixed bottom-0 bg-white w-full flex space-x-5 justify-center rounded-t-xl shadow-2lg md:hidden">
+    <nav className="fixed bottom-0 bg-white w-full flex space-x-5 justify-center rounded-t-xl shadow-2lg md:hidden z-50">
       <div className="basis-1/5 p-2">
         <Link
           to="/"

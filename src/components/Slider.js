@@ -7,12 +7,17 @@ export default function Slider(data) {
   const type = data.type;
 
   return (
-    <div className="container h-56 sm:h-64 xl:h-80 2xl:h-96">
+    <div className="container h-56 sm:h-72 md:h-52 lg:h-64 xl:h-80">
       {type === "berita" && (
         <Carousel>
           {beritas.map((berita, idx) => (
             <Link to={"/berita/"} state={{ id: berita.id }} key={idx}>
-              <img src={berita.cover} alt={berita.judul} />
+              <img
+                src={berita.cover}
+                alt={berita.judul}
+                loading="lazy"
+                style={{ objectFit: "cover" }}
+              />
             </Link>
           ))}
         </Carousel>
@@ -21,7 +26,12 @@ export default function Slider(data) {
         <Carousel>
           {beritas.map((berita, idx) => (
             <a href="https://www.instagram.com/rheznandyae/" key={idx}>
-              <img src={berita.cover} alt={berita.judul} />
+              <img
+                src={berita.cover}
+                alt={berita.judul}
+                loading="lazy"
+                style={{ objectFit: "cover" }}
+              />
             </a>
           ))}
         </Carousel>
