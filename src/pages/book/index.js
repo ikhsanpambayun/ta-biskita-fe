@@ -1,9 +1,23 @@
 import React from "react";
+import QRPayment from "../../assets/qrTicket.svg";
 import Layout from "../../components/Layout";
 import Arrow from "../../components/Arrow";
 import Button from "../../components/Button";
 
 export default function index() {
+  function showPayment() {
+    var form = document.querySelector("form");
+    if (!form.checkValidity()) {
+      var tmpSubmit = document.createElement("button");
+      form.appendChild(tmpSubmit);
+      tmpSubmit.click();
+      form.removeChild(tmpSubmit);
+    } else {
+      document.getElementById("paymentBtn").classList.remove("hidden");
+      document.getElementById("paymentBtn").classList.add("block");
+      document.getElementById("pesanBtn").classList.add("hidden");
+    }
+  }
   const halte1 = [
     "Terminal Bubulak",
     "Perum Sinbad",
@@ -29,7 +43,7 @@ export default function index() {
           Pesan Tiket
         </p>
         <div className="text-primary">
-          <form action="/book/check-in">
+          <form>
             <div className="flex flex-col gap-2">
               <div className="flex flex-col gap-1">
                 <label>Koridor</label>
@@ -77,11 +91,29 @@ export default function index() {
                   ))}
                 </select>
               </div>
-              <div className="mt-2">
-                <Button name="Buat Pemesanan Tiket" type="submit" />
+              <div id="pesanBtn" className="mt-2" onClick={showPayment}>
+                <Button name="Buat Pemesanan Tiket" type="button" />
               </div>
             </div>
           </form>
+        </div>
+        <div id="paymentBtn" className="mt-3 mb-28 hidden">
+          <div className="flex mx-auto justify-between">
+            <p className="text-base text-primary font-semibold">
+              Total Pembayaran
+            </p>
+            <p className="text-base text-primary font-semibold">Rp.5000</p>
+          </div>
+          <QRPayment className="max-w-xs mx-auto" />
+          <p className="text-base text-primary font-medium text-center max-w-xs mx-auto mb-3">
+            Pindai QR Code ini pada platform online payment pilihan Anda untuk
+            membayar tiket
+          </p>
+          <Button
+            name="Verifikasi Pembayaran"
+            type="submit"
+            link="/book/check-in"
+          />
         </div>
       </div>
     </Layout>

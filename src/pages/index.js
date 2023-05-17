@@ -7,7 +7,9 @@ import SearchBar from "../components/SearchBar";
 import Button from "../components/Button";
 import Slider from "../components/Slider";
 import Bell from "../components/Bell";
+import ExButton from "../components/ExButton";
 import Jadwal from "../components/Jadwal";
+import Figure from "../assets/figure.svg";
 
 export default function Index() {
   const [berita, setBerita] = useState(0);
@@ -31,8 +33,7 @@ export default function Index() {
 
   const seputar = [
     {
-      cover:
-        "https://media.licdn.com/dms/image/C5603AQFS2X2FaEuhMg/profile-displayphoto-shrink_800_800/0/1593363126440?e=2147483647&v=beta&t=w9l17SshPvNk8ne05MAGH7u6lN1cS51-RiS6VY9TCsI",
+      cover: "https://i.ibb.co/cDn3Szh/biskita.jpg",
       judul: "judul",
       id: 1,
     },
@@ -71,7 +72,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="md:container md:mx-auto mb-28">
+      <div className="md:container md:mx-auto mb-20">
         <div className="mt-3 md:mt-14 mx-5 md:mx-0">
           <Button name="Pesan Tiket" type="button" link="/book" />
         </div>
@@ -86,6 +87,23 @@ export default function Index() {
           <div className="md:w-2/5 w-full">
             <p className="text-primary text-sm">Berita Biskita</p>
             {berita && <Slider raw={berita} type="berita" />}
+          </div>
+        </div>
+      </div>
+      <div className="hidden md:block h-72 bg-primary mb-28">
+        <div className="container flex mx-auto justify-between mt-10">
+          <div className="w-2/5 mt-20">
+            <p className="text-white text-xl text-right mb-2">
+              Butuh bantuan lebih lanjut? Silahkan menghubungi kontak kami di
+              bawah ini
+            </p>
+            <ExButton
+              name="Kontak Melalui WhatsApp"
+              link="https://www.instagram.com/rheznandyae/"
+            />
+          </div>
+          <div className="w-2/5 mt-10">
+            <Figure />
           </div>
         </div>
       </div>
