@@ -1,49 +1,16 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import NotFound from "../assets/notFound.svg";
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-const NotFoundPage = () => {
+export default function Index() {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
+    <div className="flex flex-col items-center mt-36">
+      <NotFound />
+      <p className="text-primary text-center">
+        Halaman yang anda tuju tidak ditemukan.
       </p>
-    </main>
-  )
+      <p className="text-primary text-center">
+        Silakan periksa URL atau kembali halaman sebelumnya.
+      </p>
+    </div>
+  );
 }
-
-export default NotFoundPage
-
-export const Head = () => <title>Not found</title>

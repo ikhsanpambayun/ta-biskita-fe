@@ -72,19 +72,19 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="md:container md:mx-auto mb-20">
+      <div className="md:container md:mx-auto mb-25">
         <div className="mt-3 md:mt-14 mx-5 md:mx-0">
           <Button name="Pesan Tiket" type="button" link="/book" />
         </div>
         <div className="hidden md:block mt-3 md:mt-10">
           <Jadwal />
         </div>
-        <div className="flex flex-wrap m-auto md:justify-between mt-2 md:mt-10 mx-5 md:mx-0">
+        <div className="flex flex-wrap m-auto md:justify-between mt-1 md:mt-10 mx-5 md:mx-0">
           <div className="md:w-2/5 w-full">
             <p className="text-primary text-sm">Seputar Biskita</p>
             {seputar && <Slider raw={seputar} type="seputar" />}
           </div>
-          <div className="md:w-2/5 w-full">
+          <div className="md:w-2/5 w-full mt-1">
             <p className="text-primary text-sm">Berita Biskita</p>
             {berita && <Slider raw={berita} type="berita" />}
           </div>

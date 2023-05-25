@@ -53,6 +53,7 @@ export default function Detail({ location }) {
                   timeFrom={jadwal.jam_berangkat}
                   timeDest={jadwal.jam_tujuan}
                   color={state.color}
+                  bis={jadwal.bis_id}
                 />
               ))}
           </div>

@@ -7,7 +7,6 @@ import {
   Popup,
   Polyline,
 } from "react-leaflet";
-import { Link } from "gatsby";
 import Layout from "../../components/Layout";
 import Arrow from "../../components/Arrow";
 import SearchBar from "../../components/SearchBar";

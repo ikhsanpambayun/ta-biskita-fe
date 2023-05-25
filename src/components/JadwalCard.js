@@ -67,7 +67,9 @@ export default function JadwalCard(props) {
       <Card>
         <div className="flex">
           <Bus />
-          <h5 className="text-primary text-base font-semibold ml-2">Bus 001</h5>
+          <h5 className="text-primary text-base font-semibold ml-2">
+            Bus {props.bis}
+          </h5>
         </div>
         <div className="flex flex-col">
           <div className="flex justify-between">
