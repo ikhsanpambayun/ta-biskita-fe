@@ -25,7 +25,10 @@ export default function Slider(data) {
       {type === "seputar" && (
         <Carousel>
           {beritas.map((berita, idx) => (
-            <a href="https://www.instagram.com/rheznandyae/" key={idx}>
+            <a
+              href="https://bogor-kita.com/biskita-transpakuan-berbayar-rp4-000-mulai-awal-mei-2023/"
+              key={idx}
+            >
               <img
                 src={berita.cover}
                 alt={berita.judul}

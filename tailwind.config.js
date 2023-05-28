@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
     "./node_modules/flowbite-react/**/*.js",
   ],
+  plugins: [require("flowbite/plugin")],
   theme: {
     fontSize: {
       xs: "12px",
@@ -51,5 +52,4 @@ module.exports = {
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
 };

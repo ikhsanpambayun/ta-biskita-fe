@@ -72,7 +72,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="md:container md:mx-auto mb-25">
+      <div className="md:container md:mx-auto mb-28">
         <div className="mt-3 md:mt-14 mx-5 md:mx-0">
           <Button name="Pesan Tiket" type="button" link="/book" />
         </div>
@@ -99,7 +99,7 @@ export default function Index() {
             </p>
             <ExButton
               name="Kontak Melalui WhatsApp"
-              link="https://www.instagram.com/rheznandyae/"
+              link="https://www.instagram.com/biskitabogor/"
             />
           </div>
           <div className="w-2/5 mt-10">

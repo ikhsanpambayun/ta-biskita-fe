@@ -1,52 +1,27 @@
 import React from "react";
 import { Card } from "flowbite-react";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  Polyline,
-} from "react-leaflet";
 import Layout from "../../components/Layout";
 import Arrow from "../../components/Arrow";
 import SearchBar from "../../components/SearchBar";
+import { Link } from "gatsby";
 
 export default function index() {
-  const polyline = [
-    [-6.596593, 106.7932177],
-    [-6.5965307, 106.792941],
-    [-6.5966228, 106.7933596],
-    [-6.5966378, 106.7936171],
-    [-6.5966119, 106.7937066],
-    [-6.5965463, 106.7937894],
-    [-6.5964387, 106.7939252],
-    [-6.5964387, 106.7939252],
-    [-6.5962393, 106.7940003],
-    [-6.5956835, 106.7942199],
-    [-6.5945578, 106.7946766],
-    [-6.594264, 106.7951258],
-    [-6.5938038, 106.796139],
-    [-6.5936013, 106.7964461],
-    [-6.5931758, 106.7969298],
-    [-6.592981, 106.7970926],
-    [-6.5928177, 106.7971393],
-    [-6.5918489, 106.7971154],
-    [-6.5892708, 106.7970416],
-    [-6.5880352, 106.7970007],
-  ];
-  function showRute() {
-    document.getElementById("cardRute").classList.remove("hidden");
-    document.getElementById("cardRute").classList.add("block");
+  function showRute1() {
+    document.getElementById("cardRute1").classList.remove("hidden");
+    document.getElementById("cardRute1").classList.add("block");
     document.getElementById("cardHalte1").classList.add("hidden");
     document.getElementById("cardHalte2").classList.add("hidden");
   }
-  function showTrack() {
-    document.getElementById("content").classList.add("hidden");
+  function showRute2() {
+    document.getElementById("cardRute2").classList.remove("hidden");
+    document.getElementById("cardRute2").classList.add("block");
+    document.getElementById("cardHalte1").classList.add("hidden");
+    document.getElementById("cardHalte2").classList.add("hidden");
   }
   return (
     <Layout>
       <div className="w-full h-full">
-        <div className="absolute bg-white w-full h-max rounded-b-xl pb-6 z-10 drop-shadow-lg">
+        <div className="bg-white w-full h-max rounded-b-xl pb-6 z-10">
           <div className="md:container md:mx-auto mx-5">
             <div className="md:hidden mt-5">
               <Arrow />
@@ -56,7 +31,7 @@ export default function index() {
             </p>
             <div id="content" className="flex flex-col gap-3">
               <SearchBar></SearchBar>
-              <div onClick={showRute}>
+              <div onClick={showRute1}>
                 <Card id="cardHalte1" className="m-0">
                   <p className="text-base font-semibold text-primary m-0">
                     Halte Bappeda Bogor
@@ -74,35 +49,37 @@ export default function index() {
                   </div>
                 </Card>
               </div>
-              <div onClick={showRute}>
+              <div onClick={showRute2}>
                 <Card id="cardHalte2" className="m-0">
                   <p className="text-base font-semibold text-primary m-0">
-                    Halte Sudirman 1
+                    Halte Jembatan Merah
                   </p>
                   <p className="text-sm font-light text-primary">
-                    Jl. Raya Dramaga - Bogor, RT.04/RW.01, Paledang, Kecamatan
-                    Bogor Tengah, Kota Bogor, Jawa Barat 16121
+                    Jl. Raya Dramaga - Bogor RT.01/RW.01, Cibogor, Kecamatan
+                    Bogor Tengah, Kota Bogor, Jawa Barat
                   </p>
                   <div className="flex gap-1">
-                    <p className="text-sm font-light text-primary">45 menit</p>
+                    <p className="text-sm font-light text-primary">
+                      1 jam 5 menit
+                    </p>
                     <p className="text-sm font-light text-primary">•</p>
                     <p className="text-sm font-light text-primary">
-                      Perkiraan tiba 11:15
+                      Perkiraan tiba 11:35
                     </p>
                   </div>
                 </Card>
               </div>
-              <div onClick={showTrack}>
-                <Card id="cardRute" className="hidden m-0">
+              <div id="cardRute1" className="hidden m-0">
+                <Card href="map1/">
                   <div className="flex">
                     <h5 className="text-primary text-base font-semibold">
                       Koridor K1B
                     </h5>
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col gap-2">
                     <div className="flex-col justify-between">
                       <p className="text-sm text-primary">
-                        &#x25cf; Sudirman 1 <br />
+                        &#x25cf; Halte Bappeda Bogor <br />
                       </p>
                       <p className="text-xs text-primary">
                         100 m • Keberangkatan selanjutnya 10:30
@@ -110,10 +87,37 @@ export default function index() {
                     </div>
                     <div className="flex-col justify-between">
                       <p className="text-sm text-primary">
-                        &#x25cf; Halte Bappeda Bogor
+                        &#x25cf; Sudirman 1
                       </p>
                       <p className="text-xs text-primary">
-                        45 menit • Perkiraan tiba 11:15
+                        50 menit • Perkiraan tiba 11:20
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+              <div id="cardRute2" className="hidden m-0">
+                <Card href="map2/">
+                  <div className="flex">
+                    <h5 className="text-primary text-base font-semibold">
+                      Koridor K1B
+                    </h5>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex-col justify-between">
+                      <p className="text-sm text-primary">
+                        &#x25cf; Halte Jembatan Merah <br />
+                      </p>
+                      <p className="text-xs text-primary">
+                        50 m • Keberangkatan selanjutnya 10:30
+                      </p>
+                    </div>
+                    <div className="flex-col justify-between">
+                      <p className="text-sm text-primary">
+                        &#x25cf; Halte Museum Peta
+                      </p>
+                      <p className="text-xs text-primary">
+                        1 jam 5 menit • Perkiraan tiba 11:35
                       </p>
                     </div>
                   </div>
@@ -122,22 +126,6 @@ export default function index() {
             </div>
           </div>
         </div>
-        <MapContainer
-          className="z-0"
-          style={{ height: "100vh", width: "100vw" }}
-          center={[-6.5865, 106.7963]}
-          zoom={15}
-          scrollWheelZoom={false}
-        >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker id="marker1" position={[-6.5881244, 106.7969134]}>
-            <Popup>Sudirman 1</Popup>
-          </Marker>
-          <Marker position={[-6.5964561, 106.7928963]}>
-            <Popup>Halte Bappeda Bogor</Popup>
-          </Marker>
-          <Polyline pathOptions={{ color: "red" }} positions={polyline} />
-        </MapContainer>
       </div>
     </Layout>
   );
