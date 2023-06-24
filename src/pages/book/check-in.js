@@ -5,6 +5,8 @@ import Arrow from "../../components/Arrow";
 import Button from "../../components/Button";
 
 export default function checkin() {
+  let randNum = Math.random();
+  let qrUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" + randNum;
   return (
     <Layout>
       <div className="md:container md:mx-auto mx-5 text-primary">
@@ -13,7 +15,11 @@ export default function checkin() {
         </div>
         <p className="text-2xl font-semibold mb-2 mt-2 md:mt-6">Pesan Tiket</p>
         <div className="flex flex-col mx-auto max-w-sm text-center">
-          <QRTicket />
+          <img
+            src={qrUrl}
+            alt="QRCode Pembayaran"
+            className="max-w-xs mx-auto"
+          />
           <p className="text-sm font-semibold mt-4">
             Pindai QR Code ini pada mesin TOB BisKita
           </p>

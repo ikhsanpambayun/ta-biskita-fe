@@ -5,6 +5,8 @@ import Arrow from "../../components/Arrow";
 import Button from "../../components/Button";
 
 export default function Index() {
+  let randNum = Math.random();
+  let qrUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" + randNum;
   function showPayment() {
     var form = document.querySelector("form");
     if (!form.checkValidity()) {
@@ -268,7 +270,11 @@ export default function Index() {
             </p>
             <p className="text-base text-primary font-semibold">Rp.4000</p>
           </div>
-          <QRPayment className="max-w-xs mx-auto" />
+          <img
+            src={qrUrl}
+            alt="QRCode Pembayaran"
+            className="max-w-xs mx-auto"
+          />
           <p className="text-base text-primary font-medium text-center max-w-xs mx-auto mb-3">
             Pindai QR Code ini pada platform online payment pilihan Anda untuk
             membayar tiket

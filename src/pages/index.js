@@ -99,7 +99,7 @@ export default function Index() {
             </p>
             <ExButton
               name="Kontak Melalui WhatsApp"
-              link="https://www.instagram.com/biskitabogor/"
+              link="https://api.whatsapp.com/send?phone=6287870621004"
             />
           </div>
           <div className="w-2/5 mt-10">

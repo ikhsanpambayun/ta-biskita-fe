@@ -22,7 +22,7 @@ export default function bantuan() {
           </p>
           <ExButton
             name="Kontak Melalui WhatsApp"
-            link="https://www.instagram.com/rheznandyae/"
+            link="https://api.whatsapp.com/send?phone=6287870621004"
           />
         </div>
       </div>
