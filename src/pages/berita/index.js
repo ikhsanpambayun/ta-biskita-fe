@@ -8,7 +8,7 @@ export default function Index({ location }) {
   const [berita, setBerita] = useState(0);
   const fetchBerita = async () => {
     const response = await fetch(
-      "https://35.198.234.2/api/v1/berita/" + state.id
+      "https://34.142.210.188/api/v1/berita/" + state.id
     );
     if (!response.ok) {
       throw new Error("Data coud not be fetched!");

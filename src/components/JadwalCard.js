@@ -11,7 +11,7 @@ export default function JadwalCard(props) {
   const [halteFrom, setHalteFrom] = useState(0);
   const fetchHalteFrom = async () => {
     const response = await fetch(
-      "https://35.198.234.2/api/v1/halte/" + props.from
+      "https://34.142.210.188/api/v1/halte/" + props.from
     );
     if (!response.ok) {
       throw new Error("Data coud not be fetched!");
@@ -38,7 +38,7 @@ export default function JadwalCard(props) {
   const [halteDest, setHalteDest] = useState(0);
   const fetchHalteDest = async () => {
     const response = await fetch(
-      "https://35.198.234.2/api/v1/halte/" + props.dest
+      "https://34.142.210.188/api/v1/halte/" + props.dest
     );
     if (!response.ok) {
       throw new Error("Data coud not be fetched!");

@@ -7,7 +7,9 @@ import NotifCard from "../../components/NotifCard";
 export default function Index() {
   const [notifs, setNotifs] = useState(0);
   const fetchNotif = async () => {
-    const response = await fetch("https://35.198.234.2/api/v1/notifikasi-all/");
+    const response = await fetch(
+      "https://34.142.210.188/api/v1/notifikasi-all/"
+    );
     if (!response.ok) {
       throw new Error("Data coud not be fetched!");
     } else {

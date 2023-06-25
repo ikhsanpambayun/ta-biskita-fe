@@ -10,7 +10,7 @@ export default function Detail({ location }) {
 
   const fetchJadwal = async () => {
     const response = await fetch(
-      "https://35.198.234.2/api/v1/jadwal-koridor-timestamp/?koridor_id=" +
+      "https://34.142.210.188/api/v1/jadwal-koridor-timestamp/?koridor_id=" +
         state.id +
         "&waktu=2023-05-02T10:03:00"
     );

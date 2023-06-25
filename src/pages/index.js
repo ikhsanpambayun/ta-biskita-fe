@@ -14,7 +14,7 @@ import Figure from "../assets/figure.svg";
 export default function Index() {
   const [berita, setBerita] = useState(0);
   const fetchBerita = async () => {
-    const response = await fetch("https://35.198.234.2/api/v1/berita-all/");
+    const response = await fetch("https://34.142.210.188/api/v1/berita-all/");
     if (!response.ok) {
       throw new Error("Data coud not be fetched!");
     } else {
