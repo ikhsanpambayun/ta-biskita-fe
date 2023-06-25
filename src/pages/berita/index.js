@@ -51,9 +51,9 @@ export default function Index({ location }) {
                   .join(" ")}{" "}
                 | {new Date(berita.timestamp).toTimeString().slice(0, 5)}
               </p>
-              <p className="text-primary text-sm font-normal mt-2">
+              <div className="text-primary text-sm font-normal mt-2">
                 {berita.isi}
-              </p>
+              </div>
             </div>
           )}
         </div>
